@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import time
 import numpy as np
 import altair as alt
 
@@ -142,8 +143,9 @@ def get_simulator(dataset_id: ALSimulatorDataset,
         except Exception as e:
             print(f"⚠ Warning: Could not attach disorder to {seq_data.seq_id}: {e}")
 
-    match dataset_id:
-        case ALSimulatorDataset.MELTOME_MAXIMIZE:
+    # Match on the base dataset identity (LOW/MEDIUM share the same optimization setup)
+    match dataset_id.base_name():
+        case "MELTOME_MAXIMIZE":
             meltome_base_config = ActiveLearningFixedBaseConfig(
                 dataset_id=dataset_id,
                 simulation_data=simulation_data,
@@ -152,7 +154,7 @@ def get_simulator(dataset_id: ALSimulatorDataset,
                                           use_disorder=use_disorder,
                                           disorder_method=disorder_method,
                                           disorder_weight=disorder_weight)
-        case ALSimulatorDataset.MELTOME_MINIMIZE:
+        case "MELTOME_MINIMIZE":
             meltome_base_config = ActiveLearningFixedBaseConfig(
                 dataset_id=dataset_id,
                 simulation_data=simulation_data,
@@ -161,17 +163,17 @@ def get_simulator(dataset_id: ALSimulatorDataset,
                                           use_disorder=use_disorder,
                                           disorder_method=disorder_method,
                                           disorder_weight=disorder_weight)
-        case ALSimulatorDataset.SCL:
+        case "SCL":
             scl_base_config = ActiveLearningFixedBaseConfig(
                 dataset_id=dataset_id,
                 simulation_data=simulation_data,
                 optimization_mode=ActiveLearningOptimizationMode.DISCRETE,
-                discrete_targets=["Peroxisome"])
+                discrete_targets=["Mitochondrion"])
             return ActiveLearningSimulator(al_base_config=scl_base_config,
                                           use_disorder=use_disorder,
                                           disorder_method=disorder_method,
                                           disorder_weight=disorder_weight)
-        case ALSimulatorDataset.AMYLASE:
+        case "AMYLASE":
             amylase_base_config = ActiveLearningFixedBaseConfig(
                 dataset_id=dataset_id,
                 simulation_data=simulation_data,
@@ -180,7 +182,7 @@ def get_simulator(dataset_id: ALSimulatorDataset,
                                           use_disorder=use_disorder,
                                           disorder_method=disorder_method,
                                           disorder_weight=disorder_weight)
-        case ALSimulatorDataset.PHOT:
+        case "PHOT":
             phot_base_config = ActiveLearningFixedBaseConfig(
                 dataset_id=dataset_id,
                 simulation_data=simulation_data,
@@ -189,7 +191,9 @@ def get_simulator(dataset_id: ALSimulatorDataset,
                                           use_disorder=use_disorder,
                                           disorder_method=disorder_method,
                                           disorder_weight=disorder_weight)
-        case ALSimulatorDataset.EXOTOX:
+        case "EXOTOX":
+            # Retained only so historic EXOTOX result files still load in the dashboard;
+            # EXOTOX is excluded from ALSimulatorDataset.all() for new simulation runs.
             exotox_base_config = ActiveLearningFixedBaseConfig(
                 dataset_id=dataset_id,
                 simulation_data=simulation_data,
@@ -202,6 +206,11 @@ def get_simulator(dataset_id: ALSimulatorDataset,
 
 
 class ActiveLearningSimulator:
+    # Fixed for all datasets/scales per the current experiment matrix
+    N_SUGGESTIONS_PER_ITERATION = 10
+    MAX_API_RETRIES = 5
+    RETRY_BACKOFF_SECONDS = 15
+
     def __init__(self, al_base_config: ActiveLearningFixedBaseConfig,
                  use_disorder: bool = True,
                  disorder_method: str = "mean",
@@ -210,15 +219,36 @@ class ActiveLearningSimulator:
         self.use_disorder = use_disorder
         self.disorder_method = disorder_method
         self.disorder_weight = disorder_weight
+        # LOW datasets start with 10 labeled sequences, MEDIUM datasets with 96
+        self.n_start = al_base_config.dataset_id.n_start()
 
     @staticmethod
     def _biocentral_api():
         return BiocentralAPI(local_only=True)
 
+    def _call_with_retries(self, al_campaign_config, al_simulation_config):
+        """Retry with backoff to tolerate transient errors (e.g. server rate limiting)."""
+        last_error = None
+        for attempt in range(1, self.MAX_API_RETRIES + 1):
+            try:
+                return self._biocentral_api().al_screening_simulation(
+                    campaign_config=al_campaign_config,
+                    simulation_config=al_simulation_config,
+                ).run_with_progress()
+            except Exception as e:  # noqa: BLE001 - broad on purpose, client exceptions vary
+                last_error = e
+                if attempt == self.MAX_API_RETRIES:
+                    break
+                wait_seconds = self.RETRY_BACKOFF_SECONDS * attempt
+                print(f"⚠ Simulation call failed (attempt {attempt}/{self.MAX_API_RETRIES}): {e}. "
+                      f"Retrying in {wait_seconds}s...")
+                time.sleep(wait_seconds)
+        raise RuntimeError(f"Simulation call failed after {self.MAX_API_RETRIES} attempts") from last_error
+
     def get_simulation_config(self):
         return ActiveLearningScreeningSimulationConfig(simulation_data=self.base_config.simulation_data,
-                                                       n_start=10,  # TODO
-                                                       n_suggestions_per_iteration=5,  # TODO
+                                                       n_start=self.n_start,
+                                                       n_suggestions_per_iteration=self.N_SUGGESTIONS_PER_ITERATION,
                                                        convergence_config=ActiveLearningConvergenceConfig(
                                                            max_labels_budget=50,
                                                            n_hits=10,
@@ -241,8 +271,7 @@ class ActiveLearningSimulator:
                                                                    disorder_aggregation_method=self.disorder_method,  
                                                                    disorder_weight=self.disorder_weight)
         al_simulation_config = self.get_simulation_config()
-        result = self._biocentral_api().al_screening_simulation(campaign_config=al_campaign_config,
-                                                                simulation_config=al_simulation_config).run_with_progress()
+        result = self._call_with_retries(al_campaign_config, al_simulation_config)
         if result is None:
             raise RuntimeError("Simulation failed")
 

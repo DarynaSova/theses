@@ -60,7 +60,9 @@ def _load_compressed(run_file_paths: List[Path]) -> Dict[str, DashboardCompresse
 @st.cache_data(show_spinner=False)
 def _load_projection(dataset_id: ALSimulatorDataset, embedder_name: str) -> Optional[ProjectionResult]:
     embedder_name = embedder_name.replace("/", "-")
-    projection_path = PROJECTIONS_DIR / f"projection_result_{dataset_id.name}_{embedder_name}.json"
+    # LOW/MEDIUM scale variants share the same underlying sequences/fasta file,
+    # so the projection is stored/looked up once per base dataset name.
+    projection_path = PROJECTIONS_DIR / f"projection_result_{dataset_id.base_name()}_{embedder_name}.json"
     if projection_path.exists():
         return ProjectionResult.model_validate_json(projection_path.read_text())
     return None
@@ -639,9 +641,21 @@ def main():
 
     compressed_data = all_compressed_data[selected_run]
 
+    # Filter by dataset scale (LOW = n_start 10, MEDIUM = n_start 96).
+    # Datasets without a scale (e.g. legacy EXOTOX results) only show up in "Both".
+    scale_choice = st.sidebar.radio("Dataset scale", ["Both", "LOW", "MEDIUM"], horizontal=True)
+    if scale_choice == "Both":
+        filtered_experiments = compressed_data.experiments
+    else:
+        filtered_experiments = [e for e in compressed_data.experiments if e.dataset_id.scale() == scale_choice]
+
+    if not filtered_experiments:
+        st.warning(f"No experiments found for scale '{scale_choice}' in run '{selected_run}'.")
+        st.stop()
+
     # Group by dataset
     ds_groups: Dict[str, List[DashboardExperimentData]] = {}
-    for exp in compressed_data.experiments:
+    for exp in filtered_experiments:
         dataset_name = exp.dataset_id.name
         if dataset_name not in ds_groups:
             ds_groups[dataset_name] = []

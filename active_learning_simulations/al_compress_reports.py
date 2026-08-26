@@ -1,6 +1,7 @@
 import re
 
 from pathlib import Path
+from typing import Optional
 from al_simulator import (
     ActiveLearningMultipleSimulationResult,
     DashboardCompressedData,
@@ -18,12 +19,20 @@ def parse_dataset_from_filename(fname: str) -> str:
     return "Unknown"
 
 
-def compress_reports(run_name: str):
+def compress_reports(run_name: str, file_glob: Optional[str] = None):
+    """Compress raw simulation result files into one dashboard JSON.
+
+    ``file_glob`` restricts which raw files are picked up (e.g. only the ones
+    belonging to a single disorder configuration), so that multiple runs whose
+    raw result files coexist in ``RESULTS_DIR`` don't get mixed into each
+    other's compressed output. Defaults to every raw result file for backwards
+    compatibility with single-run usage.
+    """
     if not RESULTS_DIR.exists():
         print(f"Directory {RESULTS_DIR} not found.")
         return
 
-    json_files = sorted(RESULTS_DIR.glob("*.json"))
+    json_files = sorted(RESULTS_DIR.glob(file_glob or "*.json"))
     experiments = []
 
     for path in json_files:

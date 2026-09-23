@@ -1,0 +1,9 @@
+plotly
+name of plot: aggregation method.
+x-axis: weights (0.5, 1.0, 2.0).
+y-axis: pred models (GP, FNN, Random).
+z-axis: success rate.
+color-coded datasets.
+
+
+

@@ -109,6 +109,14 @@ def frac_below_threshold(residue_scores: List[float], threshold: float = 3.0) ->
     return sum(1 for s in residue_scores if s < threshold) / len(residue_scores)
 
 
+def n_term_frac_below_threshold(residue_scores: List[float], n: int = 20, threshold: float = 7.0) -> float:
+    """Fraction of the first n residues with disorder < threshold (N-terminal disorder)."""
+    window = residue_scores[:n]
+    if not window:
+        return 0.0
+    return sum(1 for s in window if s < threshold) / len(window)
+
+
 # Registry of available aggregation methods
 AGGREGATION_METHODS = {
     "mean": mean_disorder,
@@ -122,6 +130,8 @@ AGGREGATION_METHODS = {
     "frac_above_7": lambda x: frac_above_threshold(x, threshold=7.0),
     "frac_below_3": lambda x: frac_below_threshold(x, threshold=3.0),
     "frac_below_5": lambda x: frac_below_threshold(x, threshold=5.0),
+    "frac_below_7": lambda x: frac_below_threshold(x, threshold=7.0),
+    "n_term_disorder_20": lambda x: n_term_frac_below_threshold(x, n=20, threshold=7.0),
 }
 
 

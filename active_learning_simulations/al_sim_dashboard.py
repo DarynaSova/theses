@@ -27,7 +27,7 @@ from al_simulator import (
     DashboardExperimentData,
 )
 
-RESULTS_DIR = Path("simulation_v1_results")
+RESULTS_DIR = Path("simulation_v1_results_final")
 PROJECTIONS_DIR = Path("simulation_v1_projections")
 
 st.set_page_config(page_title="AL Simulation Dashboard", layout="wide")
@@ -46,11 +46,13 @@ def _load_dataset_sequences(selected_dataset: str) -> List[SequenceData]:
 
 @st.cache_data(show_spinner=False)
 def _load_compressed(run_file_paths: List[Path]) -> Dict[str, DashboardCompressedData]:
-    result = {}  # name to compressed data
+    result = {}  # display name to compressed data
     for path in run_file_paths:
         try:
             compressed_data = DashboardCompressedData.model_validate_json(path.read_text())
-            result[compressed_data.run_name] = compressed_data
+            # Use filename stem to prevent collisions when multiple files share the same internal run_name
+            run_key = path.stem.replace("compressed_dashboard_data_", "")
+            result[run_key] = compressed_data
         except Exception as exc:
             st.sidebar.error(f"Failed to load compressed data: {exc}")
             continue
@@ -643,14 +645,19 @@ def main():
 
     # Filter by dataset scale (LOW = n_start 10, MEDIUM = n_start 96).
     # Datasets without a scale (e.g. legacy EXOTOX results) only show up in "Both".
-    scale_choice = st.sidebar.radio("Dataset scale", ["Both", "LOW", "MEDIUM"], horizontal=True)
+    available_scales = set(e.dataset_id.scale() for e in compressed_data.experiments if e.dataset_id.scale() is not None)
+    scale_choice = st.sidebar.radio("Dataset scale", ["Both", "LOW", "MEDIUM"], horizontal=True,
+                                    help="LOW: n_start=10 initial sequences. MEDIUM: n_start=96 initial sequences.")
+    
     if scale_choice == "Both":
         filtered_experiments = compressed_data.experiments
     else:
         filtered_experiments = [e for e in compressed_data.experiments if e.dataset_id.scale() == scale_choice]
 
     if not filtered_experiments:
-        st.warning(f"No experiments found for scale '{scale_choice}' in run '{selected_run}'.")
+        st.warning(f"No experiments found for scale '{scale_choice}' in run '{selected_run}'. "
+                   f"(Note: Current results on disk contain {', '.join(sorted(available_scales)) if available_scales else 'legacy'} scale experiments. "
+                   f"MEDIUM results will be visible here once cluster simulation runs are generated/loaded.)")
         st.stop()
 
     # Group by dataset

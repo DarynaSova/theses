@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-ad1e4a833c556b689745e243a36c9a7f"}, "mark": {"type": "bar", "color": "#2F6690"}, "encoding": {"tooltip": [{"field": "dataset", "type": "nominal"}, {"field": "sequence_count", "type": "quantitative"}], "x": {"field": "sequence_count", "title": "Number of sequences", "type": "quantitative"}, "y": {"field": "dataset", "sort": "-x", "title": "Dataset", "type": "nominal"}}, "height": 350, "title": "Number of protein sequences per dataset", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-ad1e4a833c556b689745e243a36c9a7f": [{"dataset": "PHOT", "sequence_count": 2122}, {"dataset": "EXOTOX", "sequence_count": 2333}, {"dataset": "AMYLASE", "sequence_count": 3924}, {"dataset": "SCL", "sequence_count": 11517}, {"dataset": "MELTOME", "sequence_count": 20360}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

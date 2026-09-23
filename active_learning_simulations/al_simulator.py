@@ -6,7 +6,7 @@ import numpy as np
 import altair as alt
 
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
 from pydantic import BaseModel, Field
 from biotrainer_core.input_files import read_FASTA
 
@@ -91,6 +91,46 @@ class ActiveLearningFixedBaseConfig(BaseModel):
                 return "Unknown optimization mode."
 
 
+import re
+from collections import Counter
+
+_PHOT_MUTATION_RE = re.compile(r"^mut_[A-Za-z](\d+)[A-Za-z]$")
+
+
+def _phot_mutation_position(seq_id: str) -> Optional[int]:
+    """Parse the 1-based wildtype residue position from a PHOT id like 'mut_H40E'."""
+    match = _PHOT_MUTATION_RE.match(seq_id)
+    if not match:
+        return None
+    return int(match.group(1))
+
+
+def _amylase_mutation_positions(simulation_data: List[SequenceData]) -> Dict[str, Optional[int]]:
+    """Infer each variant's single-mutation position by diffing against a consensus wildtype.
+
+    AMYLASE ids (Seq0, Seq1, ...) don't encode the mutation directly, unlike PHOT.
+    All variants share the same length, so the majority residue per column is
+    used as the inferred wildtype; each sequence's mutated position is then the
+    column where it differs from that consensus. If a sequence differs at more
+    than one column (rare) we return the most disordered of those positions.
+    """
+    sequences = [sd.seq for sd in simulation_data]
+    length = len(sequences[0])
+    if any(len(seq) != length for seq in sequences):
+        return {sd.seq_id: None for sd in simulation_data}
+
+    consensus = "".join(
+        Counter(seq[i] for seq in sequences).most_common(1)[0][0]
+        for i in range(length)
+    )
+
+    positions: Dict[str, Optional[int]] = {}
+    for sd in simulation_data:
+        diffs = [i for i, (a, b) in enumerate(zip(sd.seq, consensus)) if a != b]
+        positions[sd.seq_id] = diffs[0] if len(diffs) == 1 else (diffs if diffs else None)
+    return positions
+
+
 def get_simulator(dataset_id: ALSimulatorDataset,
                   use_disorder: bool = True,
                   disorder_method: str = "mean",
@@ -130,7 +170,22 @@ def get_simulator(dataset_id: ALSimulatorDataset,
             return disorder_raw_dict[normalized_underscore]
 
         return None
-    
+
+    # 'mutation_position' is client-side only: instead of the full per-residue
+    # list, we attach a single value = -(CheZOD score at the exact mutated
+    # residue). Negating it means "bigger attached value = more disordered",
+    # matching the convention used by frac_below_7. The server then just
+    # averages this 1-element list (effective_disorder_method="mean").
+    effective_disorder_method = disorder_method
+    mutation_positions: Dict[str, object] = {}
+    if disorder_method == "mutation_position":
+        base_name = dataset_id.base_name()
+        if base_name == "PHOT":
+            mutation_positions = {sd.seq_id: _phot_mutation_position(sd.seq_id) for sd in simulation_data}
+        elif base_name == "AMYLASE":
+            mutation_positions = _amylase_mutation_positions(simulation_data)
+        effective_disorder_method = "mean"
+
     # Attach raw per-residue disorder scores to each sequence's attributes dict
     # These will be re-aggregated during acquisition based on campaign config
     for seq_data in simulation_data:
@@ -138,10 +193,26 @@ def get_simulator(dataset_id: ALSimulatorDataset,
             if seq_data.attributes is None:
                 seq_data.attributes = {}
             disorder_values = _lookup_disorder(seq_data.seq_id)
+
+            if disorder_method == "mutation_position" and disorder_values:
+                pos = mutation_positions.get(seq_data.seq_id)
+                # If multiple candidate positions were found, use the most disordered one
+                if isinstance(pos, list):
+                    candidates = [p for p in pos if 0 <= p < len(disorder_values)]
+                    pos = min(candidates, key=lambda p: disorder_values[p]) if candidates else None
+                if pos is not None and 0 <= pos < len(disorder_values):
+                    disorder_values = [-disorder_values[pos]]
+                # else: no resolvable mutation position (e.g. wildtype itself, or
+                # other dataset) -> fall back to the full per-residue list
+
             seq_data.attributes["disorder_residues"] = disorder_values
             seq_data.attributes["DISORDER_RESIDUES"] = disorder_values
         except Exception as e:
             print(f"⚠ Warning: Could not attach disorder to {seq_data.seq_id}: {e}")
+
+    disorder_method = effective_disorder_method
+
+
 
     # Match on the base dataset identity (LOW/MEDIUM share the same optimization setup)
     match dataset_id.base_name():
@@ -612,6 +683,14 @@ class ActiveLearningMultipleSimulationResult:
                         SequenceData(seq_id="Dummy2", seq="ADUMMY").model_dump(),
                         SequenceData(seq_id="Dummy3", seq="GDUMMY").model_dump()
                     ]
+
+                # Strip per-sequence scores from iteration results for all datasets
+                if 'simulation_result' in result_dict and 'iteration_results' in result_dict['simulation_result']:
+                    for it_res in result_dict['simulation_result']['iteration_results']:
+                        if 'results' in it_res:
+                            # Keep only the top suggested predictions instead of storing all sequence scores
+                            suggestions_set = set(it_res.get('suggestions', []))
+                            it_res['results'] = [r for r in it_res['results'] if r.get('entity_id') in suggestions_set]
 
                 json_results.append(result_dict)
 

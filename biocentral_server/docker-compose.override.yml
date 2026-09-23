@@ -11,6 +11,8 @@ services:
       - venv-server:/app/.venv
     environment:
       - SERVER_DEBUG=True
+      - TRITON_TIMEOUT=600
+      - TRITON_MAX_BATCH_SIZE=8
     deploy:
       resources:
         reservations:
@@ -33,6 +35,8 @@ services:
       - venv-worker:/app/.venv
     environment:
       - PYTHONPATH=/app
+      - TRITON_TIMEOUT=600
+      - TRITON_MAX_BATCH_SIZE=8
     deploy:
       resources:
         reservations:
@@ -55,10 +59,11 @@ services:
       - "8000:8000"
       - "8001:8001"
       - "8002:8002"
-    command: > # Some models are excluded for local development: --load-model=prot_t5_pipeline --load-model=esm2_t36_pipeline
+    command: >
       tritonserver
       --model-repository=/app/models
       --model-control-mode=explicit
+      --load-model=prot_t5_pipeline
       --load-model=esm2_t33_pipeline
       --load-model=prott5_sec
       --load-model=prott5_cons

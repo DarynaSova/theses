@@ -1,0 +1,4593 @@
+{
+    "run_name": "disorder_on_mutation_position_w1.0",
+    "experiments": [
+        {
+            "name": "al_sim_AMYLASE_LOW_one_hot_encoding_FNN_MCD_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 4,
+            "embedder": "one_hot_encoding",
+            "model": "FNN_MCD",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "FNN_MCD",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 0,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 22,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "Seq664",
+                "Seq624",
+                "Seq3159",
+                "Seq583",
+                "Seq590",
+                "Seq587",
+                "Seq636",
+                "Seq663",
+                "Seq581",
+                "Seq672",
+                "Seq580",
+                "Seq666",
+                "Seq3160",
+                "Seq592",
+                "Seq598",
+                "Seq3331",
+                "Seq597",
+                "Seq3335",
+                "Seq593",
+                "Seq3334",
+                "Seq671",
+                "Seq665",
+                "Seq3330",
+                "Seq582",
+                "Seq3329",
+                "Seq565",
+                "Seq668",
+                "Seq682",
+                "Seq591",
+                "Seq3332",
+                "Seq673",
+                "Seq586",
+                "Seq684",
+                "Seq600",
+                "Seq588",
+                "Seq614",
+                "Seq3333",
+                "Seq589",
+                "Seq3328",
+                "Seq685"
+            ],
+            "per_sim_n_hits": [
+                [
+                    1,
+                    0,
+                    2,
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    0,
+                    0,
+                    1,
+                    1
+                ],
+                [
+                    1,
+                    1,
+                    2,
+                    1,
+                    0
+                ],
+                [
+                    1,
+                    0,
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    1,
+                    1,
+                    2,
+                    0,
+                    0
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    0.693164050579071,
+                    0.5946126580238342,
+                    0.5890787839889526,
+                    0.9552409052848816,
+                    0.8246907591819763
+                ],
+                [
+                    0.626904308795929,
+                    0.606640636920929,
+                    0.9422525763511658,
+                    0.9588867425918579,
+                    0.9472818970680237
+                ],
+                [
+                    0.6185384392738342,
+                    0.792773425579071,
+                    0.6576172113418579,
+                    0.9371093511581421,
+                    0.8257649540901184
+                ],
+                [
+                    0.612988293170929,
+                    0.5979817509651184,
+                    0.9256673455238342,
+                    0.9290853142738342,
+                    0.9451985955238342
+                ],
+                [
+                    0.5984700322151184,
+                    0.594482421875,
+                    0.6141275763511658,
+                    0.5925455689430237,
+                    0.9154622554779053
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    1.3277994394302368,
+                    3.4557292461395264,
+                    2.5543620586395264,
+                    1.2146159410476685,
+                    1.3104166984558105
+                ],
+                [
+                    2.031787157058716,
+                    2.310497999191284,
+                    1.3497151136398315,
+                    1.744482398033142,
+                    1.1119303703308105
+                ],
+                [
+                    1.559057593345642,
+                    2.102734327316284,
+                    2.0838379859924316,
+                    2.206510305404663,
+                    2.175520896911621
+                ],
+                [
+                    1.6836344003677368,
+                    2.4180665016174316,
+                    1.837744116783142,
+                    1.2532795667648315,
+                    1.4642740488052368
+                ],
+                [
+                    1.4326863288879395,
+                    3.1524739265441895,
+                    2.60791015625,
+                    2.2359375953674316,
+                    1.4658039808273315
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.693164050579071,
+                        0.5946126580238342,
+                        0.5890787839889526,
+                        0.9552409052848816,
+                        0.8246907591819763
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.3277994394302368,
+                        3.4557292461395264,
+                        2.5543620586395264,
+                        1.2146159410476685,
+                        1.3104166984558105
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq636"
+                        ],
+                        [],
+                        [
+                            "Seq682",
+                            "Seq685"
+                        ],
+                        [
+                            "Seq684"
+                        ],
+                        [
+                            "Seq624"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        1,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.626904308795929,
+                        0.606640636920929,
+                        0.9422525763511658,
+                        0.9588867425918579,
+                        0.9472818970680237
+                    ],
+                    "iteration_metrics_suggestions": [
+                        2.031787157058716,
+                        2.310497999191284,
+                        1.3497151136398315,
+                        1.744482398033142,
+                        1.1119303703308105
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq685",
+                            "Seq636"
+                        ],
+                        [],
+                        [],
+                        [
+                            "Seq682"
+                        ],
+                        [
+                            "Seq684"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        1,
+                        2,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.6185384392738342,
+                        0.792773425579071,
+                        0.6576172113418579,
+                        0.9371093511581421,
+                        0.8257649540901184
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.559057593345642,
+                        2.102734327316284,
+                        2.0838379859924316,
+                        2.206510305404663,
+                        2.175520896911621
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq636"
+                        ],
+                        [
+                            "Seq684"
+                        ],
+                        [
+                            "Seq682",
+                            "Seq685"
+                        ],
+                        [
+                            "Seq624"
+                        ],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.612988293170929,
+                        0.5979817509651184,
+                        0.9256673455238342,
+                        0.9290853142738342,
+                        0.9451985955238342
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.6836344003677368,
+                        2.4180665016174316,
+                        1.837744116783142,
+                        1.2532795667648315,
+                        1.4642740488052368
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq636"
+                        ],
+                        [],
+                        [
+                            "Seq685"
+                        ],
+                        [
+                            "Seq682"
+                        ],
+                        [
+                            "Seq684"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        1,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5984700322151184,
+                        0.594482421875,
+                        0.6141275763511658,
+                        0.5925455689430237,
+                        0.9154622554779053
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.4326863288879395,
+                        3.1524739265441895,
+                        2.60791015625,
+                        2.2359375953674316,
+                        1.4658039808273315
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq636"
+                        ],
+                        [
+                            "Seq685"
+                        ],
+                        [
+                            "Seq682",
+                            "Seq684"
+                        ],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        2
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_AMYLASE_LOW_one_hot_encoding_GAUSSIAN_PROCESS_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 4,
+            "embedder": "one_hot_encoding",
+            "model": "GAUSSIAN_PROCESS",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "GAUSSIAN_PROCESS",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 1,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 44,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "Seq664",
+                "Seq624",
+                "Seq3159",
+                "Seq583",
+                "Seq590",
+                "Seq587",
+                "Seq636",
+                "Seq663",
+                "Seq581",
+                "Seq672",
+                "Seq580",
+                "Seq666",
+                "Seq3160",
+                "Seq592",
+                "Seq598",
+                "Seq3331",
+                "Seq597",
+                "Seq3335",
+                "Seq593",
+                "Seq3334",
+                "Seq671",
+                "Seq665",
+                "Seq3330",
+                "Seq582",
+                "Seq3329",
+                "Seq565",
+                "Seq668",
+                "Seq682",
+                "Seq591",
+                "Seq3332",
+                "Seq673",
+                "Seq586",
+                "Seq684",
+                "Seq600",
+                "Seq588",
+                "Seq614",
+                "Seq3333",
+                "Seq589",
+                "Seq3328",
+                "Seq685"
+            ],
+            "per_sim_n_hits": [
+                [
+                    1,
+                    1,
+                    3,
+                    1,
+                    2
+                ],
+                [
+                    1,
+                    2,
+                    4,
+                    3
+                ],
+                [
+                    2,
+                    1,
+                    2,
+                    2,
+                    2
+                ],
+                [
+                    1,
+                    3,
+                    1,
+                    1,
+                    3
+                ],
+                [
+                    1,
+                    2,
+                    0,
+                    2,
+                    3
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    0.7514811158180237,
+                    0.9603353142738342,
+                    0.9064778685569763,
+                    0.8328939080238342,
+                    0.9067708253860474
+                ],
+                [
+                    1.240625023841858,
+                    1.4419270753860474,
+                    1.0400390625,
+                    0.8609374761581421
+                ],
+                [
+                    0.638134777545929,
+                    0.8182780146598816,
+                    0.8524414300918579,
+                    0.8544108271598816,
+                    0.7738932371139526
+                ],
+                [
+                    0.77197265625,
+                    0.9137858152389526,
+                    0.808837890625,
+                    0.7981770634651184,
+                    0.8330891728401184
+                ],
+                [
+                    0.5963053107261658,
+                    0.9175781011581421,
+                    0.9358235597610474,
+                    0.805712878704071,
+                    0.7814778685569763
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    1.469140648841858,
+                    1.8785481452941895,
+                    1.4207031726837158,
+                    0.8339192867279053,
+                    2.1390299797058105
+                ],
+                [
+                    1.4810384511947632,
+                    2.8412108421325684,
+                    1.959814429283142,
+                    2.6266276836395264
+                ],
+                [
+                    2.6116535663604736,
+                    1.4435546398162842,
+                    0.8008137941360474,
+                    0.8652994632720947,
+                    1.4955729246139526
+                ],
+                [
+                    1.7280924320220947,
+                    2.884960889816284,
+                    1.0170572996139526,
+                    0.9527180790901184,
+                    2.153841257095337
+                ],
+                [
+                    1.368872046470642,
+                    3.165494680404663,
+                    1.6411783695220947,
+                    0.821044921875,
+                    1.4845540523529053
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                true,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.7514811158180237,
+                        0.9603353142738342,
+                        0.9064778685569763,
+                        0.8328939080238342,
+                        0.9067708253860474
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.469140648841858,
+                        1.8785481452941895,
+                        1.4207031726837158,
+                        0.8339192867279053,
+                        2.1390299797058105
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq636"
+                        ],
+                        [
+                            "Seq685"
+                        ],
+                        [
+                            "Seq668",
+                            "Seq684",
+                            "Seq3333"
+                        ],
+                        [
+                            "Seq3330"
+                        ],
+                        [
+                            "Seq664",
+                            "Seq624"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | GAUSSIAN_PROCESS | success=True",
+                    "is_success": true,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Number of hits (10) accomplished!"
+                    ],
+                    "iteration_metrics_total": [
+                        1.240625023841858,
+                        1.4419270753860474,
+                        1.0400390625,
+                        0.8609374761581421
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.4810384511947632,
+                        2.8412108421325684,
+                        1.959814429283142,
+                        2.6266276836395264
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq636"
+                        ],
+                        [
+                            "Seq685",
+                            "Seq684"
+                        ],
+                        [
+                            "Seq590",
+                            "Seq565",
+                            "Seq587",
+                            "Seq586"
+                        ],
+                        [
+                            "Seq668",
+                            "Seq591",
+                            "Seq588"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.638134777545929,
+                        0.8182780146598816,
+                        0.8524414300918579,
+                        0.8544108271598816,
+                        0.7738932371139526
+                    ],
+                    "iteration_metrics_suggestions": [
+                        2.6116535663604736,
+                        1.4435546398162842,
+                        0.8008137941360474,
+                        0.8652994632720947,
+                        1.4955729246139526
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq685",
+                            "Seq636"
+                        ],
+                        [
+                            "Seq565"
+                        ],
+                        [
+                            "Seq3160",
+                            "Seq3333"
+                        ],
+                        [
+                            "Seq3330",
+                            "Seq684"
+                        ],
+                        [
+                            "Seq668",
+                            "Seq624"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.77197265625,
+                        0.9137858152389526,
+                        0.808837890625,
+                        0.7981770634651184,
+                        0.8330891728401184
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.7280924320220947,
+                        2.884960889816284,
+                        1.0170572996139526,
+                        0.9527180790901184,
+                        2.153841257095337
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq636"
+                        ],
+                        [
+                            "Seq682",
+                            "Seq685",
+                            "Seq684"
+                        ],
+                        [
+                            "Seq3333"
+                        ],
+                        [
+                            "Seq668"
+                        ],
+                        [
+                            "Seq664",
+                            "Seq666",
+                            "Seq624"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5963053107261658,
+                        0.9175781011581421,
+                        0.9358235597610474,
+                        0.805712878704071,
+                        0.7814778685569763
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.368872046470642,
+                        3.165494680404663,
+                        1.6411783695220947,
+                        0.821044921875,
+                        1.4845540523529053
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq636"
+                        ],
+                        [
+                            "Seq685",
+                            "Seq3334"
+                        ],
+                        [],
+                        [
+                            "Seq3333",
+                            "Seq684"
+                        ],
+                        [
+                            "Seq668",
+                            "Seq3330",
+                            "Seq624"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        1,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_AMYLASE_LOW_one_hot_encoding_RANDOM_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 4,
+            "embedder": "one_hot_encoding",
+            "model": "RANDOM",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "RANDOM",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 0,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 5,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "Seq664",
+                "Seq624",
+                "Seq3159",
+                "Seq583",
+                "Seq590",
+                "Seq587",
+                "Seq636",
+                "Seq663",
+                "Seq581",
+                "Seq672",
+                "Seq580",
+                "Seq666",
+                "Seq3160",
+                "Seq592",
+                "Seq598",
+                "Seq3331",
+                "Seq597",
+                "Seq3335",
+                "Seq593",
+                "Seq3334",
+                "Seq671",
+                "Seq665",
+                "Seq3330",
+                "Seq582",
+                "Seq3329",
+                "Seq565",
+                "Seq668",
+                "Seq682",
+                "Seq591",
+                "Seq3332",
+                "Seq673",
+                "Seq586",
+                "Seq684",
+                "Seq600",
+                "Seq588",
+                "Seq614",
+                "Seq3333",
+                "Seq589",
+                "Seq3328",
+                "Seq685"
+            ],
+            "per_sim_n_hits": [
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    1,
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    1.8540689945220947,
+                    2.125520944595337,
+                    2.137890577316284,
+                    2.141145944595337,
+                    2.133072853088379
+                ],
+                [
+                    4.656640529632568,
+                    4.4317708015441895,
+                    4.436979293823242,
+                    4.453645706176758,
+                    4.443099021911621
+                ],
+                [
+                    0.9090983271598816,
+                    2.2850260734558105,
+                    2.295182228088379,
+                    2.612760305404663,
+                    3.1074869632720947
+                ],
+                [
+                    1.0976887941360474,
+                    2.069075584411621,
+                    2.2216796875,
+                    2.218229055404663,
+                    2.205533742904663
+                ],
+                [
+                    0.9308919310569763,
+                    2.139908790588379,
+                    2.140820264816284,
+                    2.1610026359558105,
+                    2.1549479961395264
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    3.221419334411621,
+                    2.9828450679779053,
+                    3.1539063453674316,
+                    2.47119140625,
+                    3.2481119632720947
+                ],
+                [
+                    8.057942390441895,
+                    8.012499809265137,
+                    8.008593559265137,
+                    7.755208492279053,
+                    9.023958206176758
+                ],
+                [
+                    1.9871419668197632,
+                    3.4942708015441895,
+                    3.511263132095337,
+                    3.5875651836395264,
+                    5.410676956176758
+                ],
+                [
+                    1.8435221910476685,
+                    2.600878953933716,
+                    3.2542967796325684,
+                    2.7645506858825684,
+                    3.7542967796325684
+                ],
+                [
+                    1.8381998538970947,
+                    3.8414063453674316,
+                    2.921907663345337,
+                    2.064453125,
+                    4.006185054779053
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        1.8540689945220947,
+                        2.125520944595337,
+                        2.137890577316284,
+                        2.141145944595337,
+                        2.133072853088379
+                    ],
+                    "iteration_metrics_suggestions": [
+                        3.221419334411621,
+                        2.9828450679779053,
+                        3.1539063453674316,
+                        2.47119140625,
+                        3.2481119632720947
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        4.656640529632568,
+                        4.4317708015441895,
+                        4.436979293823242,
+                        4.453645706176758,
+                        4.443099021911621
+                    ],
+                    "iteration_metrics_suggestions": [
+                        8.057942390441895,
+                        8.012499809265137,
+                        8.008593559265137,
+                        7.755208492279053,
+                        9.023958206176758
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.9090983271598816,
+                        2.2850260734558105,
+                        2.295182228088379,
+                        2.612760305404663,
+                        3.1074869632720947
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.9871419668197632,
+                        3.4942708015441895,
+                        3.511263132095337,
+                        3.5875651836395264,
+                        5.410676956176758
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq673"
+                        ],
+                        [],
+                        [
+                            "Seq685"
+                        ],
+                        [
+                            "Seq636",
+                            "Seq624"
+                        ],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        1,
+                        0,
+                        0,
+                        1
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        1.0976887941360474,
+                        2.069075584411621,
+                        2.2216796875,
+                        2.218229055404663,
+                        2.205533742904663
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.8435221910476685,
+                        2.600878953933716,
+                        3.2542967796325684,
+                        2.7645506858825684,
+                        3.7542967796325684
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [
+                            "Seq682"
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.9308919310569763,
+                        2.139908790588379,
+                        2.140820264816284,
+                        2.1610026359558105,
+                        2.1549479961395264
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.8381998538970947,
+                        3.8414063453674316,
+                        2.921907663345337,
+                        2.064453125,
+                        4.006185054779053
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_AMYLASE_MEDIUM_one_hot_encoding_FNN_MCD_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 10,
+            "embedder": "one_hot_encoding",
+            "model": "FNN_MCD",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "FNN_MCD",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 0,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 24,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "Seq664",
+                "Seq624",
+                "Seq3159",
+                "Seq583",
+                "Seq590",
+                "Seq587",
+                "Seq636",
+                "Seq663",
+                "Seq581",
+                "Seq672",
+                "Seq580",
+                "Seq666",
+                "Seq3160",
+                "Seq592",
+                "Seq598",
+                "Seq3331",
+                "Seq597",
+                "Seq3335",
+                "Seq593",
+                "Seq3334",
+                "Seq671",
+                "Seq665",
+                "Seq3330",
+                "Seq582",
+                "Seq3329",
+                "Seq565",
+                "Seq668",
+                "Seq682",
+                "Seq591",
+                "Seq3332",
+                "Seq673",
+                "Seq586",
+                "Seq684",
+                "Seq600",
+                "Seq588",
+                "Seq614",
+                "Seq3333",
+                "Seq589",
+                "Seq3328",
+                "Seq685"
+            ],
+            "per_sim_n_hits": [
+                [
+                    1,
+                    0,
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    0,
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    1,
+                    1,
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    3,
+                    1,
+                    1,
+                    0
+                ],
+                [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    0.7549641728401184,
+                    0.8141927123069763,
+                    0.7989094853401184,
+                    0.8296712040901184,
+                    0.895556628704071
+                ],
+                [
+                    0.7551432251930237,
+                    0.7934407591819763,
+                    0.8660644292831421,
+                    0.8711262941360474,
+                    0.8999837040901184
+                ],
+                [
+                    0.758496105670929,
+                    0.7821126580238342,
+                    0.8021810054779053,
+                    0.8284830451011658,
+                    0.898730456829071
+                ],
+                [
+                    0.6011718511581421,
+                    0.6282551884651184,
+                    0.6301106810569763,
+                    0.8353841304779053,
+                    0.8377929925918579
+                ],
+                [
+                    0.7083333134651184,
+                    0.7685221433639526,
+                    0.8384439945220947,
+                    0.8320475220680237,
+                    0.8600423336029053
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    1.398046851158142,
+                    1.8473470211029053,
+                    1.918310523033142,
+                    1.4102213382720947,
+                    1.6614258289337158
+                ],
+                [
+                    1.8141926527023315,
+                    1.6923013925552368,
+                    2.233691453933716,
+                    1.4643391370773315,
+                    1.6867839097976685
+                ],
+                [
+                    1.8658853769302368,
+                    1.4388916492462158,
+                    1.5646240711212158,
+                    2.3526041507720947,
+                    1.5598958730697632
+                ],
+                [
+                    0.6048339605331421,
+                    3.656054735183716,
+                    3.257291555404663,
+                    1.558691382408142,
+                    0.884082019329071
+                ],
+                [
+                    1.3663411140441895,
+                    1.7546223402023315,
+                    2.0423176288604736,
+                    1.6859456300735474,
+                    1.8662923574447632
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.7549641728401184,
+                        0.8141927123069763,
+                        0.7989094853401184,
+                        0.8296712040901184,
+                        0.895556628704071
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.398046851158142,
+                        1.8473470211029053,
+                        1.918310523033142,
+                        1.4102213382720947,
+                        1.6614258289337158
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq685"
+                        ],
+                        [],
+                        [
+                            "Seq624"
+                        ],
+                        [
+                            "Seq682"
+                        ],
+                        [
+                            "Seq684"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        1,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.7551432251930237,
+                        0.7934407591819763,
+                        0.8660644292831421,
+                        0.8711262941360474,
+                        0.8999837040901184
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.8141926527023315,
+                        1.6923013925552368,
+                        2.233691453933716,
+                        1.4643391370773315,
+                        1.6867839097976685
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq685",
+                            "Seq636"
+                        ],
+                        [],
+                        [
+                            "Seq624"
+                        ],
+                        [
+                            "Seq684"
+                        ],
+                        [
+                            "Seq682"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        1,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.758496105670929,
+                        0.7821126580238342,
+                        0.8021810054779053,
+                        0.8284830451011658,
+                        0.898730456829071
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.8658853769302368,
+                        1.4388916492462158,
+                        1.5646240711212158,
+                        2.3526041507720947,
+                        1.5598958730697632
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq685",
+                            "Seq636"
+                        ],
+                        [
+                            "Seq684"
+                        ],
+                        [
+                            "Seq682"
+                        ],
+                        [],
+                        [
+                            "Seq624"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.6011718511581421,
+                        0.6282551884651184,
+                        0.6301106810569763,
+                        0.8353841304779053,
+                        0.8377929925918579
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.6048339605331421,
+                        3.656054735183716,
+                        3.257291555404663,
+                        1.558691382408142,
+                        0.884082019329071
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [
+                            "Seq685",
+                            "Seq636",
+                            "Seq684"
+                        ],
+                        [
+                            "Seq682"
+                        ],
+                        [
+                            "Seq624"
+                        ],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.7083333134651184,
+                        0.7685221433639526,
+                        0.8384439945220947,
+                        0.8320475220680237,
+                        0.8600423336029053
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.3663411140441895,
+                        1.7546223402023315,
+                        2.0423176288604736,
+                        1.6859456300735474,
+                        1.8662923574447632
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq636"
+                        ],
+                        [
+                            "Seq685"
+                        ],
+                        [
+                            "Seq682"
+                        ],
+                        [
+                            "Seq684"
+                        ],
+                        [
+                            "Seq624"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_AMYLASE_MEDIUM_one_hot_encoding_GAUSSIAN_PROCESS_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 10,
+            "embedder": "one_hot_encoding",
+            "model": "GAUSSIAN_PROCESS",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "GAUSSIAN_PROCESS",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 1,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 31,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "Seq664",
+                "Seq624",
+                "Seq3159",
+                "Seq583",
+                "Seq590",
+                "Seq587",
+                "Seq636",
+                "Seq663",
+                "Seq581",
+                "Seq672",
+                "Seq580",
+                "Seq666",
+                "Seq3160",
+                "Seq592",
+                "Seq598",
+                "Seq3331",
+                "Seq597",
+                "Seq3335",
+                "Seq593",
+                "Seq3334",
+                "Seq671",
+                "Seq665",
+                "Seq3330",
+                "Seq582",
+                "Seq3329",
+                "Seq565",
+                "Seq668",
+                "Seq682",
+                "Seq591",
+                "Seq3332",
+                "Seq673",
+                "Seq586",
+                "Seq684",
+                "Seq600",
+                "Seq588",
+                "Seq614",
+                "Seq3333",
+                "Seq589",
+                "Seq3328",
+                "Seq685"
+            ],
+            "per_sim_n_hits": [
+                [
+                    2,
+                    4,
+                    3,
+                    5
+                ],
+                [
+                    0,
+                    4,
+                    2,
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                [
+                    0,
+                    2,
+                    0,
+                    1,
+                    1
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    0.5777669548988342,
+                    0.6103352904319763,
+                    0.6129557490348816,
+                    0.5718424320220947
+                ],
+                [
+                    0.5249105095863342,
+                    0.528027355670929,
+                    0.513842761516571,
+                    1.2332357168197632,
+                    0.5361328125
+                ],
+                [
+                    0.556689441204071,
+                    0.6356282830238342,
+                    0.5943359136581421,
+                    0.6099283695220947,
+                    0.9751139283180237
+                ],
+                [
+                    0.565478503704071,
+                    0.590771496295929,
+                    0.5355468988418579,
+                    0.5499837398529053,
+                    0.6693685054779053
+                ],
+                [
+                    0.5171468257904053,
+                    0.542236328125,
+                    0.5382649898529053,
+                    0.550732433795929,
+                    0.5643392205238342
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    1.0309163331985474,
+                    2.7637369632720947,
+                    1.9968750476837158,
+                    1.4839192628860474
+                ],
+                [
+                    0.5782307982444763,
+                    2.449430227279663,
+                    1.3058918714523315,
+                    1.3765299320220947,
+                    1.3819661140441895
+                ],
+                [
+                    0.8714192509651184,
+                    1.2568033933639526,
+                    1.2097004652023315,
+                    1.4529134035110474,
+                    1.8366862535476685
+                ],
+                [
+                    3.366406202316284,
+                    1.6146810054779053,
+                    0.9823648929595947,
+                    0.6594808101654053,
+                    1.5209310054779053
+                ],
+                [
+                    0.4862833619117737,
+                    2.3094401359558105,
+                    2.5589518547058105,
+                    0.7123453617095947,
+                    0.8968343138694763
+                ]
+            ],
+            "per_sim_is_success": [
+                true,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | GAUSSIAN_PROCESS | success=True",
+                    "is_success": true,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Number of hits (10) accomplished!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5777669548988342,
+                        0.6103352904319763,
+                        0.6129557490348816,
+                        0.5718424320220947
+                    ],
+                    "iteration_metrics_suggestions": [
+                        1.0309163331985474,
+                        2.7637369632720947,
+                        1.9968750476837158,
+                        1.4839192628860474
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq664",
+                            "Seq663"
+                        ],
+                        [
+                            "Seq598",
+                            "Seq3160",
+                            "Seq672",
+                            "Seq671"
+                        ],
+                        [
+                            "Seq593",
+                            "Seq582",
+                            "Seq581"
+                        ],
+                        [
+                            "Seq565",
+                            "Seq685",
+                            "Seq600",
+                            "Seq580",
+                            "Seq673"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5249105095863342,
+                        0.528027355670929,
+                        0.513842761516571,
+                        1.2332357168197632,
+                        0.5361328125
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.5782307982444763,
+                        2.449430227279663,
+                        1.3058918714523315,
+                        1.3765299320220947,
+                        1.3819661140441895
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [
+                            "Seq590",
+                            "Seq565",
+                            "Seq598",
+                            "Seq587"
+                        ],
+                        [
+                            "Seq3160",
+                            "Seq586"
+                        ],
+                        [],
+                        [
+                            "Seq3329"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.556689441204071,
+                        0.6356282830238342,
+                        0.5943359136581421,
+                        0.6099283695220947,
+                        0.9751139283180237
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.8714192509651184,
+                        1.2568033933639526,
+                        1.2097004652023315,
+                        1.4529134035110474,
+                        1.8366862535476685
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [
+                            "Seq3329"
+                        ],
+                        [
+                            "Seq3334"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.565478503704071,
+                        0.590771496295929,
+                        0.5355468988418579,
+                        0.5499837398529053,
+                        0.6693685054779053
+                    ],
+                    "iteration_metrics_suggestions": [
+                        3.366406202316284,
+                        1.6146810054779053,
+                        0.9823648929595947,
+                        0.6594808101654053,
+                        1.5209310054779053
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq598",
+                            "Seq666"
+                        ],
+                        [
+                            "Seq3160"
+                        ],
+                        [],
+                        [
+                            "Seq3333"
+                        ],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5171468257904053,
+                        0.542236328125,
+                        0.5382649898529053,
+                        0.550732433795929,
+                        0.5643392205238342
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.4862833619117737,
+                        2.3094401359558105,
+                        2.5589518547058105,
+                        0.7123453617095947,
+                        0.8968343138694763
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [
+                            "Seq3334",
+                            "Seq598"
+                        ],
+                        [],
+                        [
+                            "Seq3328"
+                        ],
+                        [
+                            "Seq3329"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        0,
+                        1,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_AMYLASE_MEDIUM_one_hot_encoding_RANDOM_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 10,
+            "embedder": "one_hot_encoding",
+            "model": "RANDOM",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "RANDOM",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 0,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 18,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "Seq664",
+                "Seq624",
+                "Seq3159",
+                "Seq583",
+                "Seq590",
+                "Seq587",
+                "Seq636",
+                "Seq663",
+                "Seq581",
+                "Seq672",
+                "Seq580",
+                "Seq666",
+                "Seq3160",
+                "Seq592",
+                "Seq598",
+                "Seq3331",
+                "Seq597",
+                "Seq3335",
+                "Seq593",
+                "Seq3334",
+                "Seq671",
+                "Seq665",
+                "Seq3330",
+                "Seq582",
+                "Seq3329",
+                "Seq565",
+                "Seq668",
+                "Seq682",
+                "Seq591",
+                "Seq3332",
+                "Seq673",
+                "Seq586",
+                "Seq684",
+                "Seq600",
+                "Seq588",
+                "Seq614",
+                "Seq3333",
+                "Seq589",
+                "Seq3328",
+                "Seq685"
+            ],
+            "per_sim_n_hits": [
+                [
+                    0,
+                    0,
+                    1,
+                    1,
+                    2
+                ],
+                [
+                    0,
+                    1,
+                    1,
+                    1,
+                    2
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    2
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    3
+                ],
+                [
+                    1,
+                    0,
+                    1,
+                    1,
+                    1
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    5.543359279632568,
+                    5.555729389190674,
+                    5.555729389190674,
+                    5.5313801765441895,
+                    5.5350260734558105
+                ],
+                [
+                    4.316015720367432,
+                    4.3006510734558105,
+                    4.3106770515441895,
+                    4.300520896911621,
+                    4.284895896911621
+                ],
+                [
+                    2.066861867904663,
+                    2.0865886211395264,
+                    2.0860676765441895,
+                    2.0872395038604736,
+                    2.139908790588379
+                ],
+                [
+                    1.6160156726837158,
+                    1.8974283933639526,
+                    1.970117211341858,
+                    1.9789388179779053,
+                    1.9689452648162842
+                ],
+                [
+                    1.75146484375,
+                    3.1145832538604736,
+                    3.1006510257720947,
+                    3.1024088859558105,
+                    3.1078124046325684
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    10.449479103088379,
+                    11.075780868530273,
+                    11.270833015441895,
+                    10.104948043823242,
+                    9.305599212646484
+                ],
+                [
+                    8.565754890441895,
+                    7.289713382720947,
+                    7.288020610809326,
+                    8.368619918823242,
+                    7.209895610809326
+                ],
+                [
+                    2.7075846195220947,
+                    3.110644578933716,
+                    3.55078125,
+                    3.555924415588379,
+                    3.0595052242279053
+                ],
+                [
+                    2.011914014816284,
+                    3.062760353088379,
+                    2.8685545921325684,
+                    3.2784504890441895,
+                    2.429427146911621
+                ],
+                [
+                    2.6312825679779053,
+                    6.25390625,
+                    5.108658790588379,
+                    5.454166889190674,
+                    5.477864742279053
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        5.543359279632568,
+                        5.555729389190674,
+                        5.555729389190674,
+                        5.5313801765441895,
+                        5.5350260734558105
+                    ],
+                    "iteration_metrics_suggestions": [
+                        10.449479103088379,
+                        11.075780868530273,
+                        11.270833015441895,
+                        10.104948043823242,
+                        9.305599212646484
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [
+                            "Seq590"
+                        ],
+                        [
+                            "Seq663"
+                        ],
+                        [
+                            "Seq600",
+                            "Seq671"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        4.316015720367432,
+                        4.3006510734558105,
+                        4.3106770515441895,
+                        4.300520896911621,
+                        4.284895896911621
+                    ],
+                    "iteration_metrics_suggestions": [
+                        8.565754890441895,
+                        7.289713382720947,
+                        7.288020610809326,
+                        8.368619918823242,
+                        7.209895610809326
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [
+                            "Seq582"
+                        ],
+                        [
+                            "Seq586"
+                        ],
+                        [
+                            "Seq592"
+                        ],
+                        [
+                            "Seq668",
+                            "Seq598"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        2.066861867904663,
+                        2.0865886211395264,
+                        2.0860676765441895,
+                        2.0872395038604736,
+                        2.139908790588379
+                    ],
+                    "iteration_metrics_suggestions": [
+                        2.7075846195220947,
+                        3.110644578933716,
+                        3.55078125,
+                        3.555924415588379,
+                        3.0595052242279053
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        [
+                            "Seq3328",
+                            "Seq684"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        1.6160156726837158,
+                        1.8974283933639526,
+                        1.970117211341858,
+                        1.9789388179779053,
+                        1.9689452648162842
+                    ],
+                    "iteration_metrics_suggestions": [
+                        2.011914014816284,
+                        3.062760353088379,
+                        2.8685545921325684,
+                        3.2784504890441895,
+                        2.429427146911621
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        [
+                            "Seq624",
+                            "Seq664",
+                            "Seq3328"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        1.75146484375,
+                        3.1145832538604736,
+                        3.1006510257720947,
+                        3.1024088859558105,
+                        3.1078124046325684
+                    ],
+                    "iteration_metrics_suggestions": [
+                        2.6312825679779053,
+                        6.25390625,
+                        5.108658790588379,
+                        5.454166889190674,
+                        5.477864742279053
+                    ],
+                    "iteration_hits": [
+                        [
+                            "Seq636"
+                        ],
+                        [],
+                        [
+                            "Seq581"
+                        ],
+                        [
+                            "Seq3334"
+                        ],
+                        [
+                            "Seq589"
+                        ]
+                    ],
+                    "iteration_consecutive_failures": [
+                        0,
+                        1,
+                        0,
+                        0,
+                        0
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_PHOT_LOW_one_hot_encoding_FNN_MCD_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 5,
+            "embedder": "one_hot_encoding",
+            "model": "FNN_MCD",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "FNN_MCD",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 0,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 0,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "mut_E66H",
+                "mut_V20M",
+                "mut_G25T",
+                "mut_E66A",
+                "mut_R59E",
+                "mut_R4V",
+                "mut_A28F",
+                "mut_H40E",
+                "mut_I58L",
+                "mut_R4E",
+                "mut_E66N",
+                "mut_C17T",
+                "mut_E66R",
+                "mut_K111I",
+                "mut_A28N",
+                "mut_H40M",
+                "mut_E66T",
+                "mut_L73V",
+                "mut_H40K",
+                "mut_R59D",
+                "mut_R43N",
+                "mut_R59T"
+            ],
+            "per_sim_n_hits": [
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    0.5684732794761658,
+                    0.5497233271598816,
+                    0.5782389044761658,
+                    0.5406087040901184,
+                    0.5629557371139526
+                ],
+                [
+                    0.5376627445220947,
+                    0.5333333611488342,
+                    0.5735676884651184,
+                    0.535205066204071,
+                    0.5609375238418579
+                ],
+                [
+                    0.5453125238418579,
+                    0.5404622554779053,
+                    0.5377604365348816,
+                    0.537402331829071,
+                    0.5613606572151184
+                ],
+                [
+                    0.5576822757720947,
+                    0.5457356572151184,
+                    0.578564465045929,
+                    0.538134753704071,
+                    0.563671886920929
+                ],
+                [
+                    0.5575358271598816,
+                    0.5406901240348816,
+                    0.5776204466819763,
+                    0.5375000238418579,
+                    0.561767578125
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    0.6640787720680237,
+                    0.6678059697151184,
+                    0.7272298336029053,
+                    0.6353922486305237,
+                    0.7482584714889526
+                ],
+                [
+                    0.6223469972610474,
+                    0.6489095091819763,
+                    0.7490234375,
+                    0.6222981810569763,
+                    0.768994152545929
+                ],
+                [
+                    0.6417806148529053,
+                    0.6639322638511658,
+                    0.6779947876930237,
+                    0.6741373538970947,
+                    0.7379720211029053
+                ],
+                [
+                    0.6495931148529053,
+                    0.6695963740348816,
+                    0.7350911498069763,
+                    0.6514485478401184,
+                    0.772216796875
+                ],
+                [
+                    0.6499837040901184,
+                    0.6565755009651184,
+                    0.7433919310569763,
+                    0.6255208253860474,
+                    0.7485026121139526
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5684732794761658,
+                        0.5497233271598816,
+                        0.5782389044761658,
+                        0.5406087040901184,
+                        0.5629557371139526
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.6640787720680237,
+                        0.6678059697151184,
+                        0.7272298336029053,
+                        0.6353922486305237,
+                        0.7482584714889526
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5376627445220947,
+                        0.5333333611488342,
+                        0.5735676884651184,
+                        0.535205066204071,
+                        0.5609375238418579
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.6223469972610474,
+                        0.6489095091819763,
+                        0.7490234375,
+                        0.6222981810569763,
+                        0.768994152545929
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5453125238418579,
+                        0.5404622554779053,
+                        0.5377604365348816,
+                        0.537402331829071,
+                        0.5613606572151184
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.6417806148529053,
+                        0.6639322638511658,
+                        0.6779947876930237,
+                        0.6741373538970947,
+                        0.7379720211029053
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5576822757720947,
+                        0.5457356572151184,
+                        0.578564465045929,
+                        0.538134753704071,
+                        0.563671886920929
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.6495931148529053,
+                        0.6695963740348816,
+                        0.7350911498069763,
+                        0.6514485478401184,
+                        0.772216796875
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5575358271598816,
+                        0.5406901240348816,
+                        0.5776204466819763,
+                        0.5375000238418579,
+                        0.561767578125
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.6499837040901184,
+                        0.6565755009651184,
+                        0.7433919310569763,
+                        0.6255208253860474,
+                        0.7485026121139526
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_PHOT_LOW_one_hot_encoding_GAUSSIAN_PROCESS_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 5,
+            "embedder": "one_hot_encoding",
+            "model": "GAUSSIAN_PROCESS",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "GAUSSIAN_PROCESS",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 0,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 0,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "mut_E66H",
+                "mut_V20M",
+                "mut_G25T",
+                "mut_E66A",
+                "mut_R59E",
+                "mut_R4V",
+                "mut_A28F",
+                "mut_H40E",
+                "mut_I58L",
+                "mut_R4E",
+                "mut_E66N",
+                "mut_C17T",
+                "mut_E66R",
+                "mut_K111I",
+                "mut_A28N",
+                "mut_H40M",
+                "mut_E66T",
+                "mut_L73V",
+                "mut_H40K",
+                "mut_R59D",
+                "mut_R43N",
+                "mut_R59T"
+            ],
+            "per_sim_n_hits": [
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    0.32408854365348816,
+                    0.27326661348342896,
+                    0.24591064453125,
+                    0.25409749150276184,
+                    0.25401610136032104
+                ],
+                [
+                    0.25552570819854736,
+                    0.24819335341453552,
+                    0.25478923320770264,
+                    0.25733643770217896,
+                    0.26333820819854736
+                ],
+                [
+                    0.24550780653953552,
+                    0.25140380859375,
+                    0.24908040463924408,
+                    0.25743815302848816,
+                    0.2574015259742737
+                ],
+                [
+                    0.293701171875,
+                    0.2618408203125,
+                    0.24950765073299408,
+                    0.25062257051467896,
+                    0.2537800967693329
+                ],
+                [
+                    0.2516723573207855,
+                    0.24512125551700592,
+                    0.26405030488967896,
+                    0.2567342221736908,
+                    0.25135090947151184
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    0.33434244990348816,
+                    0.13575643301010132,
+                    0.10098063200712204,
+                    0.13413695991039276,
+                    0.16106566786766052
+                ],
+                [
+                    0.08822021633386612,
+                    0.08122660219669342,
+                    0.06192728504538536,
+                    0.09664713591337204,
+                    0.0807698592543602
+                ],
+                [
+                    0.14487914741039276,
+                    0.0705362930893898,
+                    0.08607686311006546,
+                    0.10959574580192566,
+                    0.0897115096449852
+                ],
+                [
+                    0.3083252012729645,
+                    0.19492188096046448,
+                    0.10503743588924408,
+                    0.12711995840072632,
+                    0.11322428286075592
+                ],
+                [
+                    0.15595702826976776,
+                    0.0958150252699852,
+                    0.10096435248851776,
+                    0.09396972507238388,
+                    0.09727580100297928
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.32408854365348816,
+                        0.27326661348342896,
+                        0.24591064453125,
+                        0.25409749150276184,
+                        0.25401610136032104
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.33434244990348816,
+                        0.13575643301010132,
+                        0.10098063200712204,
+                        0.13413695991039276,
+                        0.16106566786766052
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.25552570819854736,
+                        0.24819335341453552,
+                        0.25478923320770264,
+                        0.25733643770217896,
+                        0.26333820819854736
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.08822021633386612,
+                        0.08122660219669342,
+                        0.06192728504538536,
+                        0.09664713591337204,
+                        0.0807698592543602
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.24550780653953552,
+                        0.25140380859375,
+                        0.24908040463924408,
+                        0.25743815302848816,
+                        0.2574015259742737
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.14487914741039276,
+                        0.0705362930893898,
+                        0.08607686311006546,
+                        0.10959574580192566,
+                        0.0897115096449852
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.293701171875,
+                        0.2618408203125,
+                        0.24950765073299408,
+                        0.25062257051467896,
+                        0.2537800967693329
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.3083252012729645,
+                        0.19492188096046448,
+                        0.10503743588924408,
+                        0.12711995840072632,
+                        0.11322428286075592
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.2516723573207855,
+                        0.24512125551700592,
+                        0.26405030488967896,
+                        0.2567342221736908,
+                        0.25135090947151184
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.15595702826976776,
+                        0.0958150252699852,
+                        0.10096435248851776,
+                        0.09396972507238388,
+                        0.09727580100297928
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_PHOT_LOW_one_hot_encoding_RANDOM_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 5,
+            "embedder": "one_hot_encoding",
+            "model": "RANDOM",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "RANDOM",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 0,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 0,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "mut_E66H",
+                "mut_V20M",
+                "mut_G25T",
+                "mut_E66A",
+                "mut_R59E",
+                "mut_R4V",
+                "mut_A28F",
+                "mut_H40E",
+                "mut_I58L",
+                "mut_R4E",
+                "mut_E66N",
+                "mut_C17T",
+                "mut_E66R",
+                "mut_K111I",
+                "mut_A28N",
+                "mut_H40M",
+                "mut_E66T",
+                "mut_L73V",
+                "mut_H40K",
+                "mut_R59D",
+                "mut_R43N",
+                "mut_R59T"
+            ],
+            "per_sim_n_hits": [
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    0.4966634213924408,
+                    0.5033284425735474,
+                    0.5093017816543579,
+                    0.5111165642738342,
+                    0.49571940302848816
+                ],
+                [
+                    0.2690185606479645,
+                    0.2702067196369171,
+                    0.28201496601104736,
+                    0.2855468690395355,
+                    0.2947021424770355
+                ],
+                [
+                    0.4698486328125,
+                    0.46310222148895264,
+                    0.4723551571369171,
+                    0.4690918028354645,
+                    0.46147459745407104
+                ],
+                [
+                    0.4916178286075592,
+                    0.4911702573299408,
+                    0.49557292461395264,
+                    0.49833983182907104,
+                    0.4926920533180237
+                ],
+                [
+                    0.3773030638694763,
+                    0.3772216737270355,
+                    0.3798421323299408,
+                    0.38322752714157104,
+                    0.37980955839157104
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    0.18376058340072632,
+                    0.3160969913005829,
+                    0.3383341431617737,
+                    0.2930664122104645,
+                    0.31244099140167236
+                ],
+                [
+                    0.06986542046070099,
+                    0.11787109076976776,
+                    0.13513387739658356,
+                    0.15450236201286316,
+                    0.13973592221736908
+                ],
+                [
+                    0.21683350205421448,
+                    0.2991536557674408,
+                    0.2697509825229645,
+                    0.3352091610431671,
+                    0.3511922061443329
+                ],
+                [
+                    0.2078043669462204,
+                    0.30115559697151184,
+                    0.3083740174770355,
+                    0.3276773989200592,
+                    0.4112955629825592
+                ],
+                [
+                    0.13259074091911316,
+                    0.27607014775276184,
+                    0.21030883491039276,
+                    0.24056193232536316,
+                    0.18065185844898224
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.4966634213924408,
+                        0.5033284425735474,
+                        0.5093017816543579,
+                        0.5111165642738342,
+                        0.49571940302848816
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.18376058340072632,
+                        0.3160969913005829,
+                        0.3383341431617737,
+                        0.2930664122104645,
+                        0.31244099140167236
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.2690185606479645,
+                        0.2702067196369171,
+                        0.28201496601104736,
+                        0.2855468690395355,
+                        0.2947021424770355
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.06986542046070099,
+                        0.11787109076976776,
+                        0.13513387739658356,
+                        0.15450236201286316,
+                        0.13973592221736908
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.4698486328125,
+                        0.46310222148895264,
+                        0.4723551571369171,
+                        0.4690918028354645,
+                        0.46147459745407104
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.21683350205421448,
+                        0.2991536557674408,
+                        0.2697509825229645,
+                        0.3352091610431671,
+                        0.3511922061443329
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.4916178286075592,
+                        0.4911702573299408,
+                        0.49557292461395264,
+                        0.49833983182907104,
+                        0.4926920533180237
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.2078043669462204,
+                        0.30115559697151184,
+                        0.3083740174770355,
+                        0.3276773989200592,
+                        0.4112955629825592
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.3773030638694763,
+                        0.3772216737270355,
+                        0.3798421323299408,
+                        0.38322752714157104,
+                        0.37980955839157104
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.13259074091911316,
+                        0.27607014775276184,
+                        0.21030883491039276,
+                        0.24056193232536316,
+                        0.18065185844898224
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_PHOT_MEDIUM_one_hot_encoding_FNN_MCD_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 11,
+            "embedder": "one_hot_encoding",
+            "model": "FNN_MCD",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "FNN_MCD",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 0,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 0,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "mut_E66H",
+                "mut_V20M",
+                "mut_G25T",
+                "mut_E66A",
+                "mut_R59E",
+                "mut_R4V",
+                "mut_A28F",
+                "mut_H40E",
+                "mut_I58L",
+                "mut_R4E",
+                "mut_E66N",
+                "mut_C17T",
+                "mut_E66R",
+                "mut_K111I",
+                "mut_A28N",
+                "mut_H40M",
+                "mut_E66T",
+                "mut_L73V",
+                "mut_H40K",
+                "mut_R59D",
+                "mut_R43N",
+                "mut_R59T"
+            ],
+            "per_sim_n_hits": [
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    0.5539713501930237,
+                    0.5810221433639526,
+                    0.5715169310569763,
+                    0.5297200679779053,
+                    0.5392740964889526
+                ],
+                [
+                    0.5443685054779053,
+                    0.5731282830238342,
+                    0.5699707269668579,
+                    0.5507161617279053,
+                    0.5342122316360474
+                ],
+                [
+                    0.545458972454071,
+                    0.5316080451011658,
+                    0.529492199420929,
+                    0.5300943851470947,
+                    0.5329915285110474
+                ],
+                [
+                    0.5494629144668579,
+                    0.5762857794761658,
+                    0.5752929449081421,
+                    0.5283528566360474,
+                    0.5306478142738342
+                ],
+                [
+                    0.5437662601470947,
+                    0.5676432251930237,
+                    0.5703287720680237,
+                    0.5264485478401184,
+                    0.532519519329071
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    0.6549479365348816,
+                    0.7256022095680237,
+                    0.6890299320220947,
+                    0.6965657472610474,
+                    0.708056628704071
+                ],
+                [
+                    0.6438313722610474,
+                    0.7227213382720947,
+                    0.724853515625,
+                    0.6408040523529053,
+                    0.7427896857261658
+                ],
+                [
+                    0.678466796875,
+                    0.6577799320220947,
+                    0.6011067628860474,
+                    0.67236328125,
+                    0.7072103023529053
+                ],
+                [
+                    0.6244466304779053,
+                    0.7363932132720947,
+                    0.7003580927848816,
+                    0.677978515625,
+                    0.7264974117279053
+                ],
+                [
+                    0.6443684697151184,
+                    0.7176269292831421,
+                    0.7465983033180237,
+                    0.6036539673805237,
+                    0.7169271111488342
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5539713501930237,
+                        0.5810221433639526,
+                        0.5715169310569763,
+                        0.5297200679779053,
+                        0.5392740964889526
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.6549479365348816,
+                        0.7256022095680237,
+                        0.6890299320220947,
+                        0.6965657472610474,
+                        0.708056628704071
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5443685054779053,
+                        0.5731282830238342,
+                        0.5699707269668579,
+                        0.5507161617279053,
+                        0.5342122316360474
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.6438313722610474,
+                        0.7227213382720947,
+                        0.724853515625,
+                        0.6408040523529053,
+                        0.7427896857261658
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.545458972454071,
+                        0.5316080451011658,
+                        0.529492199420929,
+                        0.5300943851470947,
+                        0.5329915285110474
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.678466796875,
+                        0.6577799320220947,
+                        0.6011067628860474,
+                        0.67236328125,
+                        0.7072103023529053
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5494629144668579,
+                        0.5762857794761658,
+                        0.5752929449081421,
+                        0.5283528566360474,
+                        0.5306478142738342
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.6244466304779053,
+                        0.7363932132720947,
+                        0.7003580927848816,
+                        0.677978515625,
+                        0.7264974117279053
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | FNN_MCD | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5437662601470947,
+                        0.5676432251930237,
+                        0.5703287720680237,
+                        0.5264485478401184,
+                        0.532519519329071
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.6443684697151184,
+                        0.7176269292831421,
+                        0.7465983033180237,
+                        0.6036539673805237,
+                        0.7169271111488342
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_PHOT_MEDIUM_one_hot_encoding_GAUSSIAN_PROCESS_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 11,
+            "embedder": "one_hot_encoding",
+            "model": "GAUSSIAN_PROCESS",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "GAUSSIAN_PROCESS",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 0,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 0,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "mut_E66H",
+                "mut_V20M",
+                "mut_G25T",
+                "mut_E66A",
+                "mut_R59E",
+                "mut_R4V",
+                "mut_A28F",
+                "mut_H40E",
+                "mut_I58L",
+                "mut_R4E",
+                "mut_E66N",
+                "mut_C17T",
+                "mut_E66R",
+                "mut_K111I",
+                "mut_A28N",
+                "mut_H40M",
+                "mut_E66T",
+                "mut_L73V",
+                "mut_H40K",
+                "mut_R59D",
+                "mut_R43N",
+                "mut_R59T"
+            ],
+            "per_sim_n_hits": [
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    0.2795654237270355,
+                    0.26875001192092896,
+                    0.26762694120407104,
+                    0.2556925415992737,
+                    0.2578084170818329
+                ],
+                [
+                    0.25235188007354736,
+                    0.2509196102619171,
+                    0.2508178651332855,
+                    0.24853108823299408,
+                    0.24861246347427368
+                ],
+                [
+                    0.24813638627529144,
+                    0.25106608867645264,
+                    0.2506347596645355,
+                    0.24957275390625,
+                    0.25242918729782104
+                ],
+                [
+                    0.26187336444854736,
+                    0.25796711444854736,
+                    0.2553507387638092,
+                    0.2524658143520355,
+                    0.24761556088924408
+                ],
+                [
+                    0.2555704712867737,
+                    0.2540690004825592,
+                    0.24604491889476776,
+                    0.24735108017921448,
+                    0.25143635272979736
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    0.25060221552848816,
+                    0.22268880903720856,
+                    0.16466471552848816,
+                    0.18808187544345856,
+                    0.19197997450828552
+                ],
+                [
+                    0.15068155527114868,
+                    0.14369100332260132,
+                    0.13712361454963684,
+                    0.16357421875,
+                    0.15385538339614868
+                ],
+                [
+                    0.08730163425207138,
+                    0.18749186396598816,
+                    0.08975982666015625,
+                    0.200286865234375,
+                    0.20041097700595856
+                ],
+                [
+                    0.15130615234375,
+                    0.17476196587085724,
+                    0.19706624746322632,
+                    0.18154703080654144,
+                    0.1995035856962204
+                ],
+                [
+                    0.18764647841453552,
+                    0.21562907099723816,
+                    0.14022623002529144,
+                    0.17247314751148224,
+                    0.1695963591337204
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.2795654237270355,
+                        0.26875001192092896,
+                        0.26762694120407104,
+                        0.2556925415992737,
+                        0.2578084170818329
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.25060221552848816,
+                        0.22268880903720856,
+                        0.16466471552848816,
+                        0.18808187544345856,
+                        0.19197997450828552
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.25235188007354736,
+                        0.2509196102619171,
+                        0.2508178651332855,
+                        0.24853108823299408,
+                        0.24861246347427368
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.15068155527114868,
+                        0.14369100332260132,
+                        0.13712361454963684,
+                        0.16357421875,
+                        0.15385538339614868
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.24813638627529144,
+                        0.25106608867645264,
+                        0.2506347596645355,
+                        0.24957275390625,
+                        0.25242918729782104
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.08730163425207138,
+                        0.18749186396598816,
+                        0.08975982666015625,
+                        0.200286865234375,
+                        0.20041097700595856
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.26187336444854736,
+                        0.25796711444854736,
+                        0.2553507387638092,
+                        0.2524658143520355,
+                        0.24761556088924408
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.15130615234375,
+                        0.17476196587085724,
+                        0.19706624746322632,
+                        0.18154703080654144,
+                        0.1995035856962204
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | GAUSSIAN_PROCESS | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.2555704712867737,
+                        0.2540690004825592,
+                        0.24604491889476776,
+                        0.24735108017921448,
+                        0.25143635272979736
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.18764647841453552,
+                        0.21562907099723816,
+                        0.14022623002529144,
+                        0.17247314751148224,
+                        0.1695963591337204
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        },
+        {
+            "name": "al_sim_PHOT_MEDIUM_one_hot_encoding_RANDOM_disorder_on_mutation_position_w1.0.json",
+            "dataset_id": 11,
+            "embedder": "one_hot_encoding",
+            "model": "RANDOM",
+            "summary": {
+                "embedder_name": "one_hot_encoding",
+                "model_type": "RANDOM",
+                "optimization_mode": "MAXIMIZE",
+                "n_simulations": 5,
+                "n_successful": 0,
+                "n_hits_threshold": 10,
+                "is_discrete": false,
+                "discrete_targets": null
+            },
+            "aggregated_hits": 0,
+            "aggregated_suggestions": 250,
+            "potential_hits": [
+                "mut_E66H",
+                "mut_V20M",
+                "mut_G25T",
+                "mut_E66A",
+                "mut_R59E",
+                "mut_R4V",
+                "mut_A28F",
+                "mut_H40E",
+                "mut_I58L",
+                "mut_R4E",
+                "mut_E66N",
+                "mut_C17T",
+                "mut_E66R",
+                "mut_K111I",
+                "mut_A28N",
+                "mut_H40M",
+                "mut_E66T",
+                "mut_L73V",
+                "mut_H40K",
+                "mut_R59D",
+                "mut_R43N",
+                "mut_R59T"
+            ],
+            "per_sim_n_hits": [
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            "per_sim_metrics_total": [
+                [
+                    0.514819324016571,
+                    0.5206217169761658,
+                    0.5159667730331421,
+                    0.5134359002113342,
+                    0.5169107913970947
+                ],
+                [
+                    0.5141519904136658,
+                    0.5130045413970947,
+                    0.5206868648529053,
+                    0.5122395753860474,
+                    0.5096353888511658
+                ],
+                [
+                    0.5206868648529053,
+                    0.5213215947151184,
+                    0.5064941644668579,
+                    0.5155436396598816,
+                    0.5070719122886658
+                ],
+                [
+                    0.5159667730331421,
+                    0.5195475220680237,
+                    0.5079752802848816,
+                    0.5108235478401184,
+                    0.5116943120956421
+                ],
+                [
+                    0.512939453125,
+                    0.5039957761764526,
+                    0.5175455808639526,
+                    0.5155436396598816,
+                    0.505078136920929
+                ]
+            ],
+            "per_sim_metrics_suggestions": [
+                [
+                    0.19768066704273224,
+                    0.3019042909145355,
+                    0.29638671875,
+                    0.49423015117645264,
+                    0.27864378690719604
+                ],
+                [
+                    0.189453125,
+                    0.27065837383270264,
+                    0.30634358525276184,
+                    0.3855387270450592,
+                    0.2573140561580658
+                ],
+                [
+                    0.18906860053539276,
+                    0.2550089657306671,
+                    0.33869630098342896,
+                    0.24507242441177368,
+                    0.32648518681526184
+                ],
+                [
+                    0.19249267876148224,
+                    0.26612141728401184,
+                    0.29157307744026184,
+                    0.2738037109375,
+                    0.3097371459007263
+                ],
+                [
+                    0.17531737685203552,
+                    0.30369871854782104,
+                    0.3003987669944763,
+                    0.2421366423368454,
+                    0.38226318359375
+                ]
+            ],
+            "per_sim_is_success": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "single_sims": [
+                {
+                    "label": "seed=42 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 42,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.514819324016571,
+                        0.5206217169761658,
+                        0.5159667730331421,
+                        0.5134359002113342,
+                        0.5169107913970947
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.19768066704273224,
+                        0.3019042909145355,
+                        0.29638671875,
+                        0.49423015117645264,
+                        0.27864378690719604
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=43 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 43,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5141519904136658,
+                        0.5130045413970947,
+                        0.5206868648529053,
+                        0.5122395753860474,
+                        0.5096353888511658
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.189453125,
+                        0.27065837383270264,
+                        0.30634358525276184,
+                        0.3855387270450592,
+                        0.2573140561580658
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=44 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 44,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5206868648529053,
+                        0.5213215947151184,
+                        0.5064941644668579,
+                        0.5155436396598816,
+                        0.5070719122886658
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.18906860053539276,
+                        0.2550089657306671,
+                        0.33869630098342896,
+                        0.24507242441177368,
+                        0.32648518681526184
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=45 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 45,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.5159667730331421,
+                        0.5195475220680237,
+                        0.5079752802848816,
+                        0.5108235478401184,
+                        0.5116943120956421
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.19249267876148224,
+                        0.26612141728401184,
+                        0.29157307744026184,
+                        0.2738037109375,
+                        0.3097371459007263
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                },
+                {
+                    "label": "seed=46 | RANDOM | success=False",
+                    "is_success": false,
+                    "seed": 46,
+                    "stop_reasons": [
+                        "Max labels budget (50) exceeded!",
+                        "Consecutive failures (5) exceeded!"
+                    ],
+                    "iteration_metrics_total": [
+                        0.512939453125,
+                        0.5039957761764526,
+                        0.5175455808639526,
+                        0.5155436396598816,
+                        0.505078136920929
+                    ],
+                    "iteration_metrics_suggestions": [
+                        0.17531737685203552,
+                        0.30369871854782104,
+                        0.3003987669944763,
+                        0.2421366423368454,
+                        0.38226318359375
+                    ],
+                    "iteration_hits": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ],
+                    "iteration_consecutive_failures": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "iteration_results_count": 5,
+                    "n_hits_threshold": 10
+                }
+            ]
+        }
+    ]
+}

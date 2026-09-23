@@ -8,7 +8,7 @@ from al_simulator import (
     DashboardExperimentData, DashboardSingleSimulationData,
 )
 
-RESULTS_DIR = Path("simulation_v1_results")
+RESULTS_DIR = Path("simulation_v1_results_final")
 
 
 def parse_dataset_from_filename(fname: str) -> str:
@@ -19,7 +19,7 @@ def parse_dataset_from_filename(fname: str) -> str:
     return "Unknown"
 
 
-def compress_reports(run_name: str, file_glob: Optional[str] = None):
+def compress_reports(run_name: str, file_glob: Optional[str] = None, results_dir: Optional[Path] = None, clean_raw: bool = False):
     """Compress raw simulation result files into one dashboard JSON.
 
     ``file_glob`` restricts which raw files are picked up (e.g. only the ones
@@ -28,11 +28,12 @@ def compress_reports(run_name: str, file_glob: Optional[str] = None):
     other's compressed output. Defaults to every raw result file for backwards
     compatibility with single-run usage.
     """
-    if not RESULTS_DIR.exists():
-        print(f"Directory {RESULTS_DIR} not found.")
+    target_dir = results_dir or RESULTS_DIR
+    if not target_dir.exists():
+        print(f"Directory {target_dir} not found.")
         return
 
-    json_files = sorted(RESULTS_DIR.glob(file_glob or "*.json"))
+    json_files = sorted(target_dir.glob(file_glob or "*.json"))
     experiments = []
 
     for path in json_files:
@@ -67,9 +68,6 @@ def compress_reports(run_name: str, file_glob: Optional[str] = None):
         # Prepare single_sims for drill-down
         single_sims = []
         for ssr in multi.simulation_results:
-            # We only need enough to render the single view
-            # Most of it is in ssr.simulation_result and ssr.al_campaign_config
-            # We can store a stripped down version
             sim_data = DashboardSingleSimulationData(
                 label=ssr.label(),
                 is_success=ssr.is_success(),
@@ -103,9 +101,18 @@ def compress_reports(run_name: str, file_glob: Optional[str] = None):
         experiments.append(exp_data)
 
     compressed = DashboardCompressedData(run_name=run_name, experiments=experiments)
-    OUTPUT_FILE = RESULTS_DIR / f"compressed_dashboard_data_{run_name}.json"
+    OUTPUT_FILE = target_dir / f"compressed_dashboard_data_{run_name}.json"
 
     with open(OUTPUT_FILE, "w") as f:
         f.write(compressed.model_dump_json(indent=4))
 
     print(f"Successfully created {OUTPUT_FILE} with {len(experiments)} experiments.")
+
+    if clean_raw:
+        print(f"Cleaning raw JSON files for {run_name} to conserve disk space...")
+        for path in json_files:
+            if "compressed_dashboard" not in path.name:
+                try:
+                    path.unlink()
+                except Exception as e:
+                    print(f"Could not remove {path.name}: {e}")
